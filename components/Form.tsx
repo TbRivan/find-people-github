@@ -4,7 +4,7 @@ export default function Form({ value, onChange }: Props) {
   return (
     <input
       placeholder="Find User on github"
-      className="border border-zinc-100 p-[20px] rounded-[8px] w-[400px]"
+      className="border border-zinc-100 p-[20px] rounded-[8px] w-full"
       value={value}
       onChange={onChange}
     />

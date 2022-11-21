@@ -9,25 +9,29 @@ export default function ProfileHeader({ user }: Props) {
     return (
       <div className="flex flex-col items-center">
         <p className="text-2xl font-bold text-gray-700">{value}</p>
-        <p className="font-semibold text-gray-500">{label}</p>
+        <p className="font-semibold text-gray-500 text-sm md:text-md">
+          {label}
+        </p>
       </div>
     );
   };
   return (
-    <div className="flex flex-row items-center space-x-5 justify-center">
+    <div className="flex flex-col md:flex-row items-center space-x-5 justify-center">
       <Image
         alt="logo"
         src={user?.avatar_url}
-        width={100}
-        height={100}
+        width={150}
+        height={150}
         className="rounded-full border"
       />
       <div>
-        <p className="text-5xl">
+        <p className="text-3xl md:text-4xl">
           {user?.name}{" "}
-          <span className="bg-zinc-100 px-3 text-lg">{user.id}</span>
+          <span className="bg-zinc-100 px-3 text-lg items-center md:items-start">
+            {user.id}
+          </span>
         </p>
-        <div className="inline-flex items-center space-x-5 mt-5">
+        <div className="inline-flex items-center space-x-5 mt-5 ml-10 md:ml-0">
           <StatsItem value={user?.followers} label="Followers" />
           <StatsItem value={user?.following} label="Following" />
           <StatsItem value={user?.public_repos} label="Public Repos" />
