@@ -24,14 +24,14 @@ export default function ProfileHeader({ user }: Props) {
         height={150}
         className="rounded-full border"
       />
-      <div>
-        <p className="text-3xl md:text-4xl">
+      <div className="flex flex-col">
+        <p className="text-2xl md:text-4xl mt-5 md:mt-0">
           {user?.name}{" "}
           <span className="bg-zinc-100 px-3 text-lg items-center md:items-start">
             {user.id}
           </span>
         </p>
-        <div className="inline-flex items-center space-x-5 mt-5 ml-10 md:ml-0">
+        <div className="inline-flex items-center space-x-5 mt-5 mx-auto">
           <StatsItem value={user?.followers} label="Followers" />
           <StatsItem value={user?.following} label="Following" />
           <StatsItem value={user?.public_repos} label="Public Repos" />
