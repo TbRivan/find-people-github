@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import Button from "../components/Button";
+import Darkside from "../components/Darkside";
 import Form from "../components/Form";
 import Header from "../components/Header";
 import UserList from "../components/UserList";
@@ -37,6 +38,7 @@ export default function Home() {
       <Head>
         <title>Find someone on Github</title>
       </Head>
+      <Darkside />
       <Header />
       <form
         className="flex place-self-center space-x-3"

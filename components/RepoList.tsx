@@ -43,7 +43,7 @@ export default function RepoList({ reposUrl }: Props) {
             </Link>
             <p className="text-sm truncate ">{repo.description}</p>
             <div className="mt-2">
-              <span className="text-sm bg-zinc-100 px-3 py-1 ">
+              <span className="text-sm bg-zinc-100 px-3 py-1 dark:text-black">
                 {repo.language}
               </span>
             </div>

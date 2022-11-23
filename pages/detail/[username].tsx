@@ -6,6 +6,7 @@ import ProfileHeader from "../../components/ProfileHeader";
 import RepoList from "../../components/RepoList";
 import { UserDetail } from "../../types/UserDetail";
 import fetcher from "../../utils/fetcher";
+import Darkside from "../../components/Darkside";
 
 export default function Detail() {
   const router = useRouter();
@@ -22,6 +23,7 @@ export default function Detail() {
         <title>Detail {user?.name}</title>
       </Head>
       <div>
+        <Darkside />
         <ProfileHeader user={user} />
         <RepoList reposUrl={user?.repos_url} />
       </div>

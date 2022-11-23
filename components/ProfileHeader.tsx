@@ -7,9 +7,11 @@ export default function ProfileHeader({ user }: Props) {
 
   const StatsItem = ({ value, label }: { value: number; label: string }) => {
     return (
-      <div className="flex flex-col items-center">
-        <p className="text-2xl font-bold text-gray-700">{value}</p>
-        <p className="font-semibold text-gray-500 text-sm md:text-md">
+      <div className="flex flex-col items-center ">
+        <p className="text-2xl font-bold text-gray-700 dark:text-slate-200">
+          {value}
+        </p>
+        <p className="font-semibold text-gray-500 text-sm md:text-md dark:text-slate-200as">
           {label}
         </p>
       </div>
@@ -27,7 +29,7 @@ export default function ProfileHeader({ user }: Props) {
       <div className="flex flex-col">
         <p className="text-2xl md:text-4xl mt-5 md:mt-0">
           {user?.name}{" "}
-          <span className="bg-zinc-100 px-3 text-lg items-center md:items-start">
+          <span className="bg-zinc-100 px-3 text-lg items-center md:items-start dark:text-black">
             {user.id}
           </span>
         </p>

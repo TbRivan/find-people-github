@@ -13,7 +13,7 @@ export default function Button({ type, isLoading }: Props) {
   return (
     <button
       type={type}
-      className="bg-black text-white hover:bg-zinc-800 p-[20px] aspect-square rounded-[8px]"
+      className="bg-black text-white hover:bg-zinc-800 p-[20px] aspect-square rounded-[8px] dark:bg-white dark:text-black dark:hover:bg-zinc-200"
     >
       {isLoading ? <Loading /> : <MagnifyingGlassIcon className="w-5 h-5" />}
     </button>
